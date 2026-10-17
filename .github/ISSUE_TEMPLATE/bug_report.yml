@@ -1,0 +1,107 @@
+name: Bug report
+description: Report a reproducible problem in a ChessRealms project
+title: "[Bug]: "
+labels: [bug]
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for taking the time to report a problem.
+
+        Do not disclose security vulnerabilities here. Follow the [ChessRealms security policy](https://github.com/ChessRealms/.github/blob/main/SECURITY.md) to report them privately.
+
+  - type: checkboxes
+    id: preliminary-checks
+    attributes:
+      label: Preliminary checks
+      options:
+        - label: I searched the existing issues and did not find a duplicate.
+          required: true
+        - label: I confirmed that this is a bug rather than a support request.
+          required: true
+
+  - type: input
+    id: version
+    attributes:
+      label: Affected version or commit
+      description: Provide the package or application version, commit SHA, or deployment URL.
+      placeholder: "For example: 1.2.0, commit abc1234, or https://example.com"
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Problem description
+      description: Clearly describe the problem and its impact.
+      placeholder: Tell us what went wrong and why it matters.
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps to reproduce
+      description: Provide the smallest reliable reproduction you can.
+      placeholder: |
+        1. Start with ...
+        2. Run or select ...
+        3. Observe ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected-behavior
+    attributes:
+      label: Expected behavior
+      description: What did you expect to happen?
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual-behavior
+    attributes:
+      label: Actual behavior
+      description: What happened instead?
+    validations:
+      required: true
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: Include relevant operating system, browser, runtime, SDK, package, or device details.
+      placeholder: |
+        Operating system:
+        Browser or runtime:
+        Other relevant versions:
+    validations:
+      required: true
+
+  - type: dropdown
+    id: regression
+    attributes:
+      label: Regression
+      description: Did this work in an earlier version?
+      options:
+        - Not sure
+        - "Yes"
+        - "No"
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs and additional context
+      description: Add relevant logs, stack traces, screenshots, recordings, FEN positions, or minimal sample code.
+
+  - type: checkboxes
+    id: sensitive-data
+    attributes:
+      label: Sensitive information
+      options:
+        - label: I removed credentials, personal data, and other sensitive information from this report.
+          required: true

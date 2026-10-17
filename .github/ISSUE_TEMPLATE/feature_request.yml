@@ -1,0 +1,71 @@
+name: Feature request
+description: Suggest an improvement or new capability for a ChessRealms project
+title: "[Feature]: "
+labels: [enhancement]
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for suggesting an improvement. Explain the problem and desired outcome before describing a particular implementation.
+
+        For usage questions or general help, use the repository's Discussions area when available.
+
+  - type: checkboxes
+    id: preliminary-checks
+    attributes:
+      label: Preliminary checks
+      options:
+        - label: I searched the existing issues and discussions and did not find a duplicate.
+          required: true
+        - label: This request is focused on one feature or closely related set of changes.
+          required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem or limitation
+      description: What problem are you trying to solve, and who is affected by it?
+      placeholder: Describe the current limitation and a concrete use case.
+    validations:
+      required: true
+
+  - type: textarea
+    id: outcome
+    attributes:
+      label: Desired outcome
+      description: What should become possible or work differently?
+      placeholder: Describe the expected behavior from a user's perspective.
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed solution
+      description: If you have an implementation or API design in mind, describe it here.
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+      description: Describe existing workarounds or other approaches you considered.
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional context
+      description: Add examples, mockups, FEN positions, links, or other relevant context.
+
+  - type: dropdown
+    id: contribution
+    attributes:
+      label: Contribution
+      description: Would you be interested in helping implement this change?
+      options:
+        - "Yes"
+        - Maybe, with guidance
+        - "No"
+    validations:
+      required: true
